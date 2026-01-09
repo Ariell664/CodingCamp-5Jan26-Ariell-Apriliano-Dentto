@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To-Do-List</title>
+</head>
+
+<body>
+
+    <p id="error" style="color:red; display:none;"></p>
+
+    <!-- Open Input -->
+    <div>
+
+        <h1>To-Do-List</h1>
+        <p>Type it before you forget!</p>
+
+        <label for="Task">Task</label>
+        <input id="Task" type="text" placeholder="Got something to do?" value=""><br>
+
+        <label for="Date">Deadline</label>
+        <input id="Date" type="date" value="">
+        
+        <label for="Status">Status</label>
+        <select name="Status" id="Status">
+                <option value="Open">Open</option>
+                <option value="Delayed">Delayed</option>
+                <option value="Closed">Closed</option>
+        </select>
+
+        <button onclick="Add()">Add</button>
+
+    </div>
+    <!-- Closed Input -->
+    <div>
+
+        <!-- Open Filter -->
+        <div>
+            <select name="filterBtn" id="filterBtn" onchange="FilterStatus()">
+                <option value="All">All</option>
+                <option value="Open">Open</option>
+                <option value="Delayed">Delayed</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </div>
+        <!-- Closed Filter -->
+
+        <!-- Open Table -->
+        <table>
+
+            <thead>
+                <tr id="head">
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+            </tbody>
+
+        </table>
+        <!-- Close Table -->
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
