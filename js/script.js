@@ -11,7 +11,7 @@ function Add() {
 
     // Validation Input
     if (taskText === "" || date === "") {
-        errorEl.textContent = "Please fill in both task and date.";
+        errorEl.textContent = "Please fill all the input fields.";
         errorEl.style.display = "block";
         return;
     }
